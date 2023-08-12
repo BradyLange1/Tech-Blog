@@ -1,14 +1,17 @@
 [
     {
       "username": "BradyLange",
-      "password": "password1234"
+      "password": "password1234",
+      "email": "email1@email.com"
     },
     {
       "username": "JennaSeavey",
-      "password": "password1234"
+      "password": "password1234",
+      "email": "email2@email.com"
     },
     {
       "username": "TitanLange",
-      "password": "password1234"
+      "password": "password1234",
+      "email": "email3@email.com"
     }
 ]

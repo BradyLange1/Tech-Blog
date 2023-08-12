@@ -28,10 +28,6 @@ const sess = {
   }),
 };
 
-app.get("/", (req, res) => {
-  res.render("homepage");
-});
-
 app.use(session(sess));
 
 app.engine("handlebars", hbs.engine);
