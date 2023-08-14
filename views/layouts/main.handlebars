@@ -1,11 +1,30 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{title}}</title>
-</head>
-<body>
-    {{{body}}}
-</body>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav id="nav-bar">
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        {{#unless logged_in}}
+          <a href="/login">Login</a>
+        {{else}}
+          <a href="#" id="logout">Logout</a>
+        {{/unless}}
+      </nav>
+    </header>
+    <body>
+      {{{body}}}
+    </body>
+    
+
+    {{#if logged_in}}
+      <p>logged in</p>
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
 </html>

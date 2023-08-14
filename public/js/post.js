@@ -3,12 +3,11 @@ const signupFormHandler = async (event) => {
   
     const title = document.querySelector("#title-post").value.trim();
     const body = document.querySelector("#body-post").value.trim();
-    const user_id = document.querySelector("#userId-post").value.trim();
   
-    if (title && body && user_id) {
+    if (title && body) {
       const response = await fetch("/api/posts", {
         method: "POST",
-        body: JSON.stringify({ title, body, user_id }),
+        body: JSON.stringify({ title, body}),
         headers: { "Content-Type": "application/json" },
       });
       console.log(response);

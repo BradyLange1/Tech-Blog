@@ -1,0 +1,25 @@
+<div id="title">
+  <h1>Your Dashboard</h1>
+</div>
+
+<h2 class="welcome-back">Welcome back {{username}}!</h2>
+<h2 class="welcome-back">Your posts:</h2>
+
+<div id="body">
+  {{#each posts as |post|}}
+
+    <div id="post-card">
+      <header id="post-header">
+        <h2>{{post.title}}</h2>
+        <p id="posted-by">Posted by
+          {{post.user.username}}
+          on
+          {{post.date_created}}</p>
+      </header>
+      <p id="post-body">{{post.body}}</p>
+    </div>
+
+  {{/each}}
+</div>
+
+<a href="/post" id="new-post">+ Create new post</a>
