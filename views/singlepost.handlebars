@@ -10,7 +10,7 @@
     <p id="posted-by">Posted by
       {{post.user.username}}
       on
-      {{post.date_created}}</p>
+      {{format_date post.date_created}}</p>
   </header>
   <p id="post-body">{{post.body}}</p>
 </div>
@@ -18,7 +18,7 @@
 {{#each post.comments as |comment|}}
   <div id="comment-card">
     <p>{{comment.body}}</p>
-    <p>- {{comment.user.username}} ---- {{comment.date_created}}</p>
+    <p>- {{comment.user.username}} ---- {{format_date comment.date_created}}</p>
   </div>
 {{/each}}
 
