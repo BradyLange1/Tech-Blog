@@ -2,8 +2,6 @@
   <h1>The Tech Blog</h1>
 </div>
 
-{{log post}}
-
 {{log post.comments}}
 <div id="post-card">
   <header id="post-header">
@@ -20,7 +18,7 @@
 {{#each post.comments as |comment|}}
   <div id="comment-card">
     <p>{{comment.body}}</p>
-    <p>- {{comment.user.username}}</p>
+    <p>- {{comment.user.username}} ---- {{comment.date_created}}</p>
   </div>
 {{/each}}
 

@@ -122,3 +122,11 @@ body {
     margin: 20px;
     padding: 20px;
 }
+
+#post-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
