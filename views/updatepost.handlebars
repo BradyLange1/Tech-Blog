@@ -1,0 +1,50 @@
+<div id="title">
+  <h1>The Tech Blog</h1>
+</div>
+
+<div id="post-card">
+  <header id="post-header">
+    <h2>{{post.title}}</h2>
+
+    <p id="posted-by">Posted by
+      {{post.user.username}}
+      on
+      {{post.date_created}}</p>
+  </header>
+  <p id="post-body">{{post.body}}</p>
+</div>
+
+<div class="form-group">
+  <label for="title-post">Title:</label>
+  <input
+    class="form-input"
+    type="text"
+    id="title-post"
+    value="{{post.title}}"
+  />
+</div>
+<div class="form-group">
+  <label for="body-post">Body:</label>
+  <textarea class="form-input body-input" type="text" id="body-post">
+    {{post.body}}
+  </textarea>
+</div>
+<div class="form-group floating-button-div">
+  <a
+    data-id="{{post.id}}"
+    href="#"
+    class="floating-button"
+    id="update-button"
+  >Update post</a>
+</div>
+
+<div class="form-group floating-button-div">
+  <a
+    data-id="{{post.id}}"
+    class="floating-button"
+    id="delete-button"
+    href="#"
+  >Delete post</a>
+</div>
+
+<script src="../../js/update.js"></script>

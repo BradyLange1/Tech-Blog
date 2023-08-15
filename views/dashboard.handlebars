@@ -10,7 +10,7 @@
 
     <div id="post-card">
       <header id="post-header">
-        <h2>{{post.title}}</h2>
+        <h2><a href="/post/update/{{post.id}}" class="edit-post">{{post.title}}</a></h2>
         <p id="posted-by">Posted by
           {{post.user.username}}
           on
@@ -22,4 +22,6 @@
   {{/each}}
 </div>
 
-<a href="/post" id="new-post">+ Create new post</a>
+<div class="floating-button-div">
+  <a href="/post" class="floating-button">+ Create new post</a>
+</div>

@@ -1,0 +1,37 @@
+<div id="title">
+  <h1>The Tech Blog</h1>
+</div>
+
+{{log post}}
+
+{{log post.comments}}
+<div id="post-card">
+  <header id="post-header">
+    <h2>{{post.title}}</h2>
+
+    <p id="posted-by">Posted by
+      {{post.user.username}}
+      on
+      {{post.date_created}}</p>
+  </header>
+  <p id="post-body">{{post.body}}</p>
+</div>
+
+{{#each post.comments as |comment|}}
+  <div id="comment-card">
+    <p>{{comment.body}}</p>
+    <p>- {{comment.user.username}}</p>
+  </div>
+{{/each}}
+
+<form class="login-form post-form">
+  <div class="form-group">
+    <label for="body-comment">Comment:</label>
+    <textarea name="text" id="body-comment" cols="30" rows="10"></textarea>
+  </div>
+  <div class="form-group floating-button-div">
+    <button class="btn btn-primary" type="submit">Submit Comment</button>
+  </div>
+</form>
+
+<script src="../../js/comment.js"></script>
